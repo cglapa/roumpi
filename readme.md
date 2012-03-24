@@ -1,5 +1,3 @@
-## Anchor Cms
+## Roumpi
 
-A lightweight content management system for art-directed blogs.
-
-[Official Website & Documentation](http://anchorcms.com/)
+Un CMS léger, rapide. destiné aux associations. Licence WTFPL.
