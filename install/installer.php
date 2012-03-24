@@ -1,10 +1,11 @@
 <?php
 
 /*
-	Helper functions
+	fonctions d’aide
 */
 function random($length = 16) {
-	$pool = str_split('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', 1);
+	$pool = str_split('0123456789abcdefghijklmnopqrstuvwxyzàâéèêëîïôùûüÿçæœ
+ABCDEFGHIJKLMNOPQRSTUVWXYZÀÂÉÈÊËÎÏÔÙÛÜŸÇÆŒ', 1);
 	$value = '';
 
 	for ($i = 0; $i < $length; $i++)  {
@@ -15,7 +16,7 @@ function random($length = 16) {
 }
 	
 /*
-	Installer
+	Installeur
 */
 
 $fields = array('host', 'user', 'pass', 'db', 'name', 'description', 'theme', 'email', 'path', 'clean_urls');
@@ -28,30 +29,30 @@ foreach($fields as $field) {
 }
 
 if(empty($post['db'])) {
-	$errors[] = 'Please specify a database name';
+	$errors[] = 'Merci de renseigner un nom de base de donnée.';
 }
 
 if(empty($post['host'])) {
-	$errors[] = 'Please specify a database host';
+	$errors[] = 'Merci de renseigner un nom d’hôte.';
 }
 
 if(empty($post['name'])) {
-	$errors[] = 'Please enter a site name';
+	$errors[] = 'Entrez s’il vous plaît un nom pour le site.';
 }
 
 if(empty($post['theme'])) {
-	$errors[] = 'Please select a theme';
+	$errors[] = 'Sélectionnez un thème. S’il vous plaît.';
 }
 
 if(filter_var($post['email'], FILTER_VALIDATE_EMAIL) === false) {
-	$errors[] = 'Please enter a valid email address';
+	$errors[] = 'Essayez d’entrer une adresse mail valide…';
 }
 
 if(version_compare(PHP_VERSION, '5.3.0', '<')) {
-	$errors[] = 'Anchor requires PHP 5.3 or newer, your current environment is running PHP ' . PHP_VERSION;
+	$errors[] = 'Roumpi a besoin d’une version supérieure à PHP 5.3. Or, votre environnement semble être la ' . PHP_VERSION;
 }
 
-// test database
+// test de la bdd
 if(empty($errors)) {
 	try {
 		$dsn = 'mysql:dbname=' . $post['db'] . ';host=' . $post['host'];
@@ -61,7 +62,7 @@ if(empty($errors)) {
 	}
 }
 
-// create config file
+// création des fichiers de configuration
 if(empty($errors)) {
 	$template = file_get_contents('../config.default.php');
 	
@@ -72,9 +73,9 @@ if(empty($errors)) {
 		"'host' => 'localhost'",
 		"'username' => 'root'",
 		"'password' => ''",
-		"'name' => 'anchorcms'",
+		"'name' => 'roumpi'",
 		
-		// apllication paths
+		// chemins
 		"'base_url' => '/'",
 		"'index_page' => 'index.php'",
 		"'key' => ''"
@@ -85,7 +86,7 @@ if(empty($errors)) {
 		"'password' => '" . $post['pass'] . "'",
 		"'name' => '" . $post['db'] . "'",
 
-		// apllication paths
+		// chemins
 		"'base_url' => '/" . $base_url . "'",
 		"'index_page' => '" . $index_page . "'",
 		"'key' => '" . random(32) . "'"
@@ -105,17 +106,17 @@ if(empty($errors)) {
 			$htaccess = str_replace('# RewriteBase /', 'RewriteBase /' . $base_url, $htaccess);
 	
 			if(file_put_contents('../.htaccess', $htaccess) === false) {
-				$errors[] = 'Unable to create .htaccess file. Make to create one to enable clean urls.';
+				$errors[] = 'Incapable de créer un fichier .htaccess. Vous devrez le faire pour avoir les url propres.';
 			}
 		} else {
-			$warnings[] = 'It looks like you already have a htaccess file in place, to use clean URLs please copy and paste our sample htaccess.txt file, remember to update the RewriteBase option if you have installed Anchor in a subfolder.';
+			$warnings[] = 'Il semble que vous avez déjà un fichier .htaccess en place. Pour avoir des url propres, vous pouvez copier et coller le code du fichier htaccess.txt. N’oubliez pas de changer l’argument <em>RewriteBase</em> si vous avez installé Roumpi dans un sous-dossier.';
 		}
 	}
 }
 
-// create db
+// création bdd
 if(empty($errors)) {
-	// create a unique password for our installation
+	// créer un mot de passe unique pour l’installation.
 	$password = random(8);
 
 	$sql = str_replace('[[now]]', time(), file_get_contents('anchor.sql'));
@@ -134,18 +135,18 @@ if(empty($errors)) {
 	} catch(PDOException $e) {
 		$errors[] = $e->getMessage();
 		
-		// rollback any changes
+		// transaction
 		if($dbh->inTransaction()) {
 			$dbh->rollBack();
 		}
 	}
 }
 
-// output response
+// afficher la réponse
 header('Content-Type: application/json');
 
 if(empty($errors)) {
-	//no errors we're all gooood
+	// aucune erreur. c’est toooop !
 	$response['installed'] = true;
 	$response['password'] = $password;
 	$response['warnings'] = $warnings;
@@ -155,5 +156,5 @@ if(empty($errors)) {
 	$response['warnings'] = $warnings;
 }
 
-// output json formatted string
+// afficher la sortie json
 echo json_encode($response);

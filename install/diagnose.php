@@ -1,7 +1,7 @@
 <?php
 
 /*
-	Database connection test
+	test de connexion à la bdd
 */
 
 $fields = array('host', 'user', 'pass', 'db');
@@ -12,14 +12,14 @@ foreach($fields as $field) {
 }
 
 if(empty($post['db'])) {
-	$errors[] = 'Please specify a database name';
+	$errors[] = 'Vous devez spécifier un nom de base de données';
 }
 
 if(empty($post['host'])) {
-	$errors[] = 'Please specify a database host';
+	$errors[] = 'Il faudrait renseigner un hôte de base.';
 }
 
-// test database
+// tester la bdd
 if(empty($errors)) {
 	try {
 		$dsn = 'mysql:dbname=' . $post['db'] . ';host=' . $post['host'];
@@ -29,11 +29,11 @@ if(empty($errors)) {
 	}
 }
 
-// output response
+// envoyer la réponse
 header('Content-Type: text/plain');
 
 if(empty($errors)) {
-	//no errors we're all gooood
+	// aucune erreur, coooooool !
 	echo 'good';
 } else {
 	echo implode(', ', $errors);

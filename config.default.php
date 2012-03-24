@@ -1,48 +1,48 @@
 <?php defined('IN_CMS') or die('No direct access allowed.');
 
 /*
-	Anchor Cms - Default configuration
+	Roumpi - Configuration
 */
 return array(
-	//  MySQL database details
+	//  informations base de donnée MySQL
 	'database' => array(
 		'host' => 'localhost',
 		'username' => 'root',
 		'password' => '',
-		'name' => 'anchorcms'
+		'name' => 'roumpi'
 	),
 	
-	// Application settings
+	// paramètres
 	'application' => array(
-		// url paths
+		// chemins (url)
 		'base_url' => '/',
 		'index_page' => 'index.php',
 
-		// your time zone
-		'timezone' => 'UTC',
+		// fuseau horraire
+		'timezone' => 'UTC+1',
 
-		// access to admin
+		// accès à l’administration
 		'admin_folder' => 'admin',
 
-		// your unique application key used for signing passwords
+		// votre clé pour signer les mots de passes
 		'key' => ''
 	),
 	
-	// Session details
+	// paramètres de sessions
 	'session' => array(
-		'name' => 'anchorcms',
+		'name' => 'roumpi',
 		'expire' => 3600,
 		'path' => '/',
 		'domain' => ''
 	),
 
-	// Error handling
+	// erreurs
 	'error' => array(
 		'ignore' => array(E_NOTICE, E_USER_NOTICE, E_DEPRECATED, E_USER_DEPRECATED),
 		'detail' => false,
 		'log' => false
 	),
 
-	// Show database profile
+	// afficher le profil de la base de données
 	'debug' => false
 );

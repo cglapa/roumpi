@@ -35,7 +35,7 @@ $(function() {
 		$('#diagnose').animate({'opacity': 1});
 
 		if(data == 'good') {
-			notes.show().append('<p class="success">&#10003; Database test successful.</p>').fadeIn();
+			notes.show().append('<p class="success">&#10003; Réussite dans le test de la base.</p>').fadeIn();
 		} else {
 			notes.show().append('<p class="error">' + data + '</p>').fadeIn();
 		}
@@ -61,13 +61,13 @@ $(function() {
 			var content = $('.content');
 			
 			content.animate({'opacity': 0}, function() {
-				var btn_text = 'Continue to your site.';
+				var btn_text = 'Continuer sur votre site.';
 
-				var html = '<h2>Thanks for installing!</h2>';
-				html += '<p>We created an account for you.<br>The username is <b>admin</b>, and the password is <strong>' + data.password + '</strong>.</p>';
+				var html = '<h2>Merci pour l’installation !</h2>';
+				html += '<p>Nous avons créé un compte pour vous.<br>Le pseudo est <b>admin</b> et le mot de passe <strong>' + data.password + '</strong>.</p>';
 
 				if(data.warnings.length) {
-					btn_text = 'OK, I understand, Continue to your site.';
+					btn_text = 'Oui, j’ai compris. Continuer sur le site.';
 
 					html += '<ul style="padding-bottom: 1em;">';
 

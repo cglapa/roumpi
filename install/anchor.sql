@@ -80,7 +80,7 @@ CREATE TABLE `users` (
 ) ENGINE=MyISAM CHARSET=utf8 COLLATE=utf8_general_ci;
 
 INSERT INTO `users` (`username`, `password`, `email`, `real_name`, `bio`, `status`, `role`) VALUES
-('admin', '[[password]]', '[[email]]', 'Administrator', 'Default account for Anchor.', 'active', 'administrator');
+('admin', '[[password]]', '[[email]]', 'Administrator', 'Default account for Roumpi.', 'active', 'administrator');
 
 DROP TABLE IF EXISTS `sessions`;
 

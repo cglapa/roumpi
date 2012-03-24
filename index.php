@@ -1,23 +1,23 @@
 <?php
 
 /**
- *    Anchor CMS
+ *    Roumpi
  *
- *    Originally built by @visualidiot, with thanks to @kieronwilson, @spenserj and a bunch of other contributors.
- *    You're all great.
+ *    dérive de AnchorCMS, par @visualidiot.
+ *    Tout se passera bien !
  */
 
-// benchmark
-define('ANCHOR_START', microtime(true));
+// point de référence
+define('ROUMPI_START', microtime(true));
 
-//  Set the include path
+//  définir le chemin
 define('PATH', pathinfo(__FILE__, PATHINFO_DIRNAME) . '/');
 
-//  Block direct access to any PHP files
+//  bloquer l’accès à tous les fichiers PHP
 define('IN_CMS', true);
 
-//  Anchor version
-define('ANCHOR_VERSION', 0.6);
+//  version
+define('ROUMPI_VERSION', 1.3247);
 
-// Lets bootstrap our application and get it ready to run
+// mettons en place l’application et rendons la prête
 require PATH . 'system/bootstrap.php';
