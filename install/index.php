@@ -106,11 +106,11 @@
                     </p>
                     <p>
                         <label for="pass">Le mot de passe :</label>
-                        <input id="pass" autocapitalize="off" name="pass" placeholder="password">
+                        <input id="pass" autocapitalize="off" name="pass" placeholder="motdepasse">
                     </p>
                     <p>
                         <label for="db">Le nom de la base :</label>
-                        <input id="db" autocapitalize="off" name="db" placeholder="anchor">
+                        <input id="db" autocapitalize="off" name="db" placeholder="roumpi">
                     </p>
                     
                     <a href="#check" class="button">Vérifier tout ceci…</a>
@@ -121,7 +121,7 @@
                     
                     <p>
                         <label for="name">Votre nom :</label>
-                        <input id="name" name="name" placeholder="My awesome Anchor site">
+                        <input id="name" name="name" placeholder="Un site Roumpi g.é.n.i.a.l">
                     </p>
                     
                     <p>

@@ -119,7 +119,7 @@ if(empty($errors)) {
 	// créer un mot de passe unique pour l’installation.
 	$password = random(8);
 
-	$sql = str_replace('[[now]]', time(), file_get_contents('anchor.sql'));
+	$sql = str_replace('[[now]]', time(), file_get_contents('roumpi.sql'));
 	$sql = str_replace('[[password]]', crypt($password), $sql);
 	$sql = str_replace('[[email]]', strtolower(trim($post['email'])), $sql);
 	

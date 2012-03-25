@@ -1,11 +1,11 @@
-<?php defined('IN_CMS') or die('No direct access allowed.');
+<?php defined('IN_CMS') or die('Aucun accès direct n’est autorisé.');
 
 /**
 	Check our environment
 */
 if(version_compare(PHP_VERSION, '5.3.0', '<')) {
 	// echo and exit with some usful information
-	echo 'Anchor requires PHP 5.3 or newer, your current environment is running PHP ' . PHP_VERSION;
+	echo 'Roumpi a besoin d’une version postérieure à PHP 5.3. La votre est PHP ' . PHP_VERSION;
 	exit(1);
 }
 
