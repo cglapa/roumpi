@@ -18,7 +18,7 @@
 	<?php endif; ?>
 
     <footer id="bottom">
-        <small>Powered by Anchor, version <?php echo ANCHOR_VERSION; ?>. 
+        <small>Propulsé par Roumpi, dans sa version <?php echo ROUMPI_VERSION; ?>. 
         <a href="<?php echo Url::make(); ?>">Visit your site</a>.
         <?php if(Config::get('debug', false)): ?>
         <br><a id="debug_toggle" href="#debug">Show database profile</a>

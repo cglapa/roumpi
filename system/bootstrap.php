@@ -18,7 +18,7 @@ Autoloader::map(array(
 	'Config' => PATH . 'system/classes/config.php',
 	'Error' => PATH . 'system/classes/error.php',
 	'Session' => PATH . 'system/classes/session.php',
-	'Anchor' => PATH . 'system/classes/roumpi.php',
+	'Roumpi' => PATH . 'system/classes/roumpi.php',
 	'Template' => PATH . 'system/classes/template.php',
 	'Request' => PATH . 'system/classes/request.php',
 	'Response' => PATH . 'system/classes/response.php',

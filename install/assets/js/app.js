@@ -35,7 +35,7 @@ $(function() {
 		$('#diagnose').animate({'opacity': 1});
 
 		if(data == 'good') {
-			notes.show().append('<p class="success">&#10003; Réussite dans le test de la base.</p>').fadeIn();
+			notes.show().append('<p class="success">&#10003; Base de données : ça marche !</p>').fadeIn();
 		} else {
 			notes.show().append('<p class="error">' + data + '</p>').fadeIn();
 		}

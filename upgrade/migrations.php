@@ -87,7 +87,7 @@ if(Schema::has('meta', 'key', 'posts_per_page') === false) {
 $migration->apply();
 
 // update config
-Config::set('session.name', 'anchorcms');
+Config::set('session.name', 'roumpi');
 Config::set('session.expire', 3600);
 Config::set('session.path', '/');
 Config::set('session.domain', '');

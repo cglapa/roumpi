@@ -2,13 +2,13 @@
 <html lang="en-gb">
     <head>
         <meta charset="utf-8">
-        <title>Upgrade Anchor CMS</title>
+        <title>Upgrade Roumpi</title>
         <mate name="robots" content="noindex, nofollow">
         <link rel="stylesheet" href="assets/css/app.css">
     </head>
     <body>
     
-    	<h1><img src="assets/img/logo.gif" alt="Anchor install logo"></h1>
+    	<h1><img src="assets/img/logo.gif" alt="Roumpi install logo"></h1>
     	
     	<?php
     	
@@ -46,9 +46,9 @@
     	<?php else: ?>
 
         <div class="content">
-            <h2>Upgrading Anchor.</h2>
+            <h2>Upgrading Roumpi.</h2>
 
-			<p>Thank you for downloading the latest version of Anchor. 
+			<p>Thank you for downloading the latest version of Roumpi. 
 			To get you up and running we need to make a few changes to bring you up to date.</p>
 
             <form action="run.php" method="post">

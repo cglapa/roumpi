@@ -65,7 +65,7 @@ function latest_version() {
 	// only run the version check once per session
 	if(($version = Session::get('latest_version')) === false) {
 		// returns plain text string with version number or 0 on failure.
-		$version = floatval(Curl::get('http://anchorcms.com/version'));
+		$version = floatval(Curl::get('http://julienbarrier.fr/roumpi/version'));
 		Session::set('latest_version', $version);
 	}
 
@@ -76,8 +76,8 @@ function error_check() {
     $errors = array();
 
     //  Check for older versions
-    if(version_compare(ANCHOR_VERSION, ($version = latest_version()), '<')) {
-        $errors[] = 'Your version of Anchor is out of date. Please <a href="http://anchorcms.com">download the latest version</a>.';
+    if(version_compare(ROUMPI_VERSION, ($version = latest_version()), '<')) {
+        $errors[] = 'Votre version de Roumpi est périmée.Vous pouvez télécharger la dernière version sur le site de <a href="http://julienbarrier.fr/roumpi/">Julien Barrier, créateur</a>.';
     }
 
     // do something useful with it
@@ -88,7 +88,7 @@ function error_check() {
 	Benchmarking
 */
 function execution_time() {
-	$miliseconds = microtime(true) - ANCHOR_START;
+	$miliseconds = microtime(true) - ROUMPI_START;
 	return round($miliseconds, 4);
 }
 

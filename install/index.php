@@ -94,7 +94,7 @@
             
             <form method="get" novalidate>
                 <fieldset id="diagnose">
-                    <legend>À propos de votre base de donnée.</legend>
+                    <legend>À propos de la base de données.</legend>
                     
                     <p>
                         <label for="host">Votre hôte :</label>
@@ -117,7 +117,7 @@
                 </fieldset>
                 
                 <fieldset>
-                    <legend>À propos de votre site.</legend>
+                    <legend>À propos du site.</legend>
                     
                     <p>
                         <label for="name">Votre nom :</label>

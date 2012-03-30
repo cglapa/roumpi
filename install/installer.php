@@ -4,8 +4,8 @@
 	fonctions d’aide
 */
 function random($length = 16) {
-	$pool = str_split('0123456789abcdefghijklmnopqrstuvwxyzàâéèêëîïôùûüÿçæœ
-ABCDEFGHIJKLMNOPQRSTUVWXYZÀÂÉÈÊËÎÏÔÙÛÜŸÇÆŒ', 1);
+	$pool = str_split('0123456789abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ', 1); /*àâéèêëîïôùûüÿçæœ ÀÂÉÈÊËÎÏÔÙÛÜŸÇÆŒ*/
 	$value = '';
 
 	for ($i = 0; $i < $length; $i++)  {

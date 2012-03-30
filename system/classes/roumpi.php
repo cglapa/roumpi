@@ -4,7 +4,7 @@
 	This is the front controller that 
 	will route all incoming requests
 */
-class Anchor {
+class Roumpi {
 
 	private static function setup() {
 		// Query metadata and store into our config

@@ -37,7 +37,7 @@ class Session {
 		static::gc();
 		
 		// get session id
-		$name = Config::get('session.name', 'anchorcms');
+		$name = Config::get('session.name', 'roumpi');
 		static::$id = Cookie::get($name);
 
 		if(static::$id === false) {
@@ -67,7 +67,7 @@ class Session {
 	
 	public static function end() {
 		// cookie details
-		$name = Config::get('session.name', 'anchorcms');
+		$name = Config::get('session.name', 'roumpi');
 		$expire = time() + Config::get('session.expire', 86400);
 		$path = Config::get('session.path', '/');
 		$domain = Config::get('session.domain', '');

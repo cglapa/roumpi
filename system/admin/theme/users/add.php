@@ -45,14 +45,14 @@
     				<?php endforeach; ?>
     			</select>
     			
-    			<em>The user&rsquo;s role. See <a href="//anchorcms.com/docs/roles">here</a> for more info.</em>
+    			<em>The user&rsquo;s role. See <a href="//julienbarrier.fr/roumpi/docs/roles">here</a> for more info.</em>
 			</p>
 		</fieldset>
 		
 		<fieldset>
 		
 		    <legend>User details</legend>
-		    <em>Create the details for your new user to log in to Anchor.</em>
+		    <em>Create the details for your new user to log in to Roumpi.</em>
 		
 		    <p>
 		        <label for="username">Username:</label>

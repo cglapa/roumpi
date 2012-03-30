@@ -15,7 +15,7 @@
                     <?php if(is_debug()): ?><a id="debug_toggle" href="#debug">Show database profile</a><?php endif; ?>
                 </ul>
                 
-                <a id="attribution" title="Powered by Anchor CMS" href="//anchorcms.com">Powered by Anchor CMS</a>
+                <a id="attribution" title="Propulsé par Roumpi" href="//julienbarrier.fr/roumpi">Propulsé par Roumpi</a>
             </footer>
 
             <?php if(is_debug()): ?>

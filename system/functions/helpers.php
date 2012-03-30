@@ -62,7 +62,7 @@ function is_debug() {
 
 // benchmarking
 function execution_time() {
-	$miliseconds = microtime(true) - ANCHOR_START;
+	$miliseconds = microtime(true) - ROUMPI_START;
 	return round($miliseconds, 4);
 }
 

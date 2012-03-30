@@ -1,15 +1,15 @@
 
-## Migrating to the latest version of Anchor
+## Migrating to the latest version of Roumpi
 
 1.	**Backup your database and files!**
 
 	Here is an example for backup up on most servers via ssh using mysql dump:
 
-		mysqldump --compact --quick --user myusername --password=mypassword --host=localhost anchorcms > /path/to/my/site/httpdocs/db.sql
+		mysqldump --compact --quick --user myusername --password=mypassword --host=localhost roumpi > /path/to/my/site/httpdocs/db.sql
 
 	lets tar gzip it to a safe location.
 
-		tar --create --gzip --file=/home/myusername/backups/anchor.tgz  --directory=/path/to/my/site/httpdocs
+		tar --create --gzip --file=/home/myusername/backups/roumpi.tgz  --directory=/path/to/my/site/httpdocs
 
 2.	Download the latest version.
 

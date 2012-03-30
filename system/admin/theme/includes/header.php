@@ -11,7 +11,7 @@
 
 		<header id="top">
 			<a id="logo" href="<?php echo Url::make(Config::get('application.admin_folder')); ?>">
-				<img src="<?php echo theme_url('assets/img/logo.png'); ?>" alt="Anchor CMS">
+				<img src="<?php echo theme_url('assets/img/logo.png'); ?>" alt="Roumpi">
 			</a>
 
 			<?php if(($user = Users::authed()) !== false): ?>
