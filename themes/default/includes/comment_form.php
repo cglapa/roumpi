@@ -1,7 +1,7 @@
 <?php if(comments_open()): ?>
     <section class="comments">
     
-        <h1><?php echo total_comments() . pluralise(total_comments(), ' comment'); ?> <a href="#comment" title="Contribute to the discussion!">Add your own</a></h1>
+        <h1><?php echo total_comments() . pluralise(total_comments(), ' comment'); ?> <a href="#comment" title="Participez !">Ajoutez votre commentaire</a></h1>
     
         <?php if(has_comments()): ?>
         <ul class="commentlist">
@@ -19,23 +19,23 @@
         <?php endif; ?>
         
         <form id="comment" class="commentform" method="post" action="<?php echo current_url(); ?>#comment">
-            <legend>Add your comments</legend>
+            <legend>Donnez votre avis !</legend>
             
             <?php echo comment_form_notifications(); ?>
             
             <p class="name">
-                <label for="name">Your name:</label>
+                <label for="name">Votre nom :</label>
                 <?php echo comment_form_input_name(); ?>
             </p>
             
             <p class="email">
-                <label for="email">Your email address:</label>
+                <label for="email">Votre adresse e-mail :</label>
                 <em>Will never be published.</em>
                 <?php echo comment_form_input_email(); ?>                
             </p>
             
             <p class="textarea">
-                <label for="text">Your comment:</label>
+                <label for="text">Ce que vous avez à dire :</label>
                 <?php echo comment_form_input_text(); ?>
             </p>
             

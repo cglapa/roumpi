@@ -183,31 +183,32 @@ p.footer {
     	<div class="content">
     		<h2>Ouups !</h2>
 
-		<div class="content">
-			<h3>Message :</h3>
+		<fieldset>
+			<legend>Message d’erreur</legend>
 			<?php echo $message; ?> in <strong><?php echo str_replace(PATH, '', $file); ?></strong> on line <strong><?php echo $line; ?></strong>.
-		</div>
+		</fieldset>
 
-		<div class="content">
-			<h3>Stack Trace :</h3>
+		<fieldset>
+			<legend>Stack Trace.</legend>
 
 			<pre><?php echo $trace; ?></pre>
-		</div>
+		</fieldset>
 
-		<div class="content">
-			<h3>Contexte :</h3>
-
+		<fieldset>
+			<legend>Contexte de l’erreur.</legend>
 			<?php if(count($contexts)): ?>
+			<small>
 				<?php foreach ($contexts as $num => $context): ?>
 					<pre><?php echo htmlentities($num.' '.$context); ?></pre>
 				<?php endforeach; ?>
+			</small>
 			<?php else: ?>
 				contexte non disponible
 			<?php endif; ?>
-		</div>
+		</fieldset>
 		
-		<div class="content">
-			<h3>Informations supplémentaires</h3>
+		<fieldset>
+			 <legend>Informations supplémentaires</legend>
 			
 			<ul>
 				<li>Version de PHP: <?php echo phpversion(); ?></li>
@@ -216,8 +217,9 @@ p.footer {
 				<li>User Agent: <?php echo $_SERVER['HTTP_USER_AGENT']; ?></li>
 				<li>Request Uri: <?php echo $_SERVER['REQUEST_URI']; ?></li>
 			</ul>
-		</div>
-
+		</fieldset>
+		<p style="clear: both;"><a href="./" class="button" style="float: right; display: inline-block;">Recharger la page</a></p>
+                <br style="clear: both;">
     	</div>
 	</body>
 </html>

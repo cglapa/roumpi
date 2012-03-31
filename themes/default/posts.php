@@ -15,7 +15,7 @@
 		<p><?php echo posts_prev(); ?> <?php echo posts_next(); ?></p>
 
 	<?php else: ?>
-		<p>Looks like you have some writing to do!</p>
+		<p>Vous devriez peut être vous mettre à écrire, non ?</p>
 	<?php endif; ?>
 
 </section>

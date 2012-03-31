@@ -69,7 +69,7 @@ if(Config::load(PATH . 'config.php') === false) {
 }
 
 // Register the default timezone for the application.
-date_default_timezone_set(Config::get('application.timezone'));
+date_default_timezone_set('Europe/Paris'/*Config::get('application.timezone')*/);
 
 // Register the PHP exception handler.
 set_exception_handler(array('Error', 'exception'));
@@ -88,7 +88,7 @@ Session::start();
 /**
 	Handle routing
 */
-Anchor::run();
+Roumpi::run();
 
 /**
 	Close and end session

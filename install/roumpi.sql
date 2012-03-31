@@ -40,7 +40,7 @@ CREATE TABLE `pages` (
 
 INSERT INTO `pages` (`slug`, `name`, `title`, `content`, `status`) VALUES
 ('articles', 'Articles', 'Quelques nouvelles', '<p>Bienvenue !</p>', 'published'),
-('a-propos', 'À propos', 'A little bit about me', '<p>Quelques informations. Qui sommes nous ?</p>', 'published');
+('a-propos', 'À propos', 'À propos.', '<p>Quelques informations. Qui sommes nous ?</p>', 'published');
 
 DROP TABLE IF EXISTS `posts`;
 

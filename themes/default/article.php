@@ -9,7 +9,7 @@
 <?php include 'includes/comment_form.php'; ?>
 
 <section class="footnote">
-	<p>This article is my <?php echo numeral(article_id()); ?> oldest. It is <?php echo count_words(article_html()); ?> words long. 
+	<p>Cet article est le <?php echo numeral(article_id()); ?> que j’ai publié. J’y ai écrit <?php echo count_words(article_html()); ?> mots. 
 	<?php echo article_custom_field('attribution'); ?></p>
 </section>
 
