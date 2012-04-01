@@ -241,7 +241,7 @@ header#top {
 	padding: 50px 0 20px;
 }
 	header#top div {
-		position: relative;
+		/*position: relative;*/
 	}
 	header#top a#logo {
 		color: #444;
@@ -315,10 +315,12 @@ ul, ol {
 		    }
 	header#top img#search {
 		cursor: pointer;
-		
-		position: absolute;
-		right: 0;
-		bottom: 0;
+		position: relative;
+		top: 12px;
+		right: 10px;
+	}
+	header#top li.search {
+		float: right;
 	}
 	
 ul.items {

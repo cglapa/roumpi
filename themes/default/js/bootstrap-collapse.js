@@ -148,7 +148,7 @@
     // fix sub nav on scroll
     var $win = $(window)
       , $nav = $('.subnav')
-      , navTop = $('.subnav').length && $('.subnav').offset().top - 1
+      , navTop = $('.subnav').length && $('.subnav').offset().top - 0
       , isFixed = 0
 
     processScroll()

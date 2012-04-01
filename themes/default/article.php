@@ -1,5 +1,5 @@
 <section class="content" id="article-<?php echo article_id(); ?>">
-    <h1><?php echo article_title(); ?></h1>
+    <h2><?php echo article_title(); ?></h2>
 	
 	<article>
 	    <?php echo article_html(); ?>

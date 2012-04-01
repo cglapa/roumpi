@@ -9,8 +9,6 @@
 		<link rel="stylesheet" href="<?php echo theme_url('/css/reset.css'); ?>">
 		<link rel="stylesheet" href="<?php echo theme_url('/css/style.css'); ?>">
 		<link rel="stylesheet" href="<?php echo theme_url('/css/bootstrap.css'); ?>">
-		<link href="<?php echo theme_url('/css/bootstrap-responsive.css'); ?>" rel="stylesheet">
-   		<link href="<?php echo theme_url('/css/docs.css'); ?>" rel="stylesheet">
 		
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo rss_url(); ?>">
 
@@ -42,7 +40,7 @@
 	
 		<header id="top">
 
-    	<h1><a id="logo" href="<?php echo base_url(); ?>"><img src="./themes/default/img/logo.png" alt="Logo de Roumpi"></a></h1>
+    	<h1><a id="logo" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>/themes/default/img/logo.png" alt="Logo de Roumpi"></a></h1>
 			<div class="wrap">
 				
 				<!--<?php echo site_name(); ?></a>-->
@@ -59,6 +57,7 @@
 							</a>
 						</li>
 						<?php endwhile; ?>
+						<li class="search"></li>
 					</ul>
 				<!--</nav>-->
 </div></div>

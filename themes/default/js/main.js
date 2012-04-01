@@ -3,7 +3,7 @@ $(function() {
 	var viewport = $(window),
 		body = $('body'),
 		
-		header = $('#top div.wrap'),
+		header = $('#top div.wrap div.subnav ul li.search'),
 		search = $('#search');
 		
 	//  Give a CSS hook
