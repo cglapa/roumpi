@@ -36,6 +36,7 @@ h2 {
     font-size: 32px;
     font-weight: 300;
     color: #57829e;
+    margin-bottom: 40px;
 }
 
 h3 {
@@ -356,6 +357,7 @@ ul.items {
         ul.items li a h2 {
             font-size: 28px;
             line-height: 30px;
+	    margin-bottom: 0;
             
             color: #555;
             

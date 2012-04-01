@@ -1,6 +1,6 @@
 <section class="content">
     
-    <h1>Vous avez recherché &ldquo;<?php echo search_term(); ?>&rdquo;.</h1>
+    <h2>Vous avez recherché « <?php echo search_term(); ?> ».</h2>
     
     <?php if(has_search_results()): ?>
         <p>À celà, nous avons trouvé <?php echo total_search_results(); ?> <?php echo pluralise(total_search_results(), 'result'); ?> for &ldquo;<?php echo search_term(); ?>&rdquo;</p>

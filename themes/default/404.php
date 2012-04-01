@@ -1,6 +1,6 @@
 
 <section class="content">
-    <h1>Zut, cette page ne peut être trouvée.</h1>
+    <h2>Zut, cette page ne peut être trouvée.</h2>
 
     <p>Malheuresement, la page intitulée <code><?php echo current_url(); ?></code> 
     Ne peut pas être trouvée. Mais n’abandonnez pas pour autant ! Vous pouvez toujours
