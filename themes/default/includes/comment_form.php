@@ -1,7 +1,7 @@
 <?php if(comments_open()): ?>
-    <section class="comments">
+    <article class="comments">
     
-        <h1><?php echo total_comments() . pluralise(total_comments(), ' comment'); ?> <a href="#comment" title="Participez !">Ajoutez votre commentaire</a></h1>
+        <h3><?php echo total_comments() . pluralise(total_comments(), ' commentaire'); ?> <a href="#comment" title="Participez !">Ajoutez le votre</a></h3>
     
         <?php if(has_comments()): ?>
         <ul class="commentlist">
@@ -10,7 +10,7 @@
                 <h2><?php echo comment_name(); ?></h2>
                 <time><?php echo relative_time(comment_time()); ?></time> 
                 
-                <div class="content">
+                <div class="contenu">
                     <?php echo comment_text(); ?>
                 </div>
             </li>
@@ -30,7 +30,7 @@
             
             <p class="email">
                 <label for="email">Votre adresse e-mail :</label>
-                <em>Will never be published.</em>
+                <em>(ne sera jamais publié)</em>
                 <?php echo comment_form_input_email(); ?>                
             </p>
             
@@ -44,5 +44,5 @@
             </p>
         </form>
     
-    </section>
+    </article>
 <?php endif; ?>

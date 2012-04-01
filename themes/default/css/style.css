@@ -132,7 +132,7 @@ fieldset {
     label {
         display: block;
         font-size: 12px;
-        font-weight: bold;
+        font-weight: 400;
         cursor: pointer;
     }
     
@@ -370,8 +370,8 @@ ul.items {
                 color: #2082ab;
             }
             
-section.comments {
-    width: 900px;
+article.comments {
+    width: 720px;
     margin: 0 auto 50px;
     padding-top: 30px;
     
@@ -379,91 +379,92 @@ section.comments {
     
     border-top: 1px solid #eee;
 }
-    section.comments h1, section.comments form.commentform legend {
-        font-weight: bold;
+    article.comments h3, article.comments form.commentform legend {
         font-size: 22px;
-        
+        font-weight: 300;
         color: #555;
     }
-        section.comments h1 a {
+        article.comments h3 a {
             float: right;
             font-size: 15px;
         }
-    section.comments ul {
+    article.comments ul {
         list-style: none;
         overflow: hidden;
         
-        padding-left: 170px;
+        padding-left: 30px;
         padding-bottom: 30px;
     }
-        section.comments ul li {
+        article.comments ul li {
             float: left;
-            width: 670px;
+            width: 600px;
             
-            margin-bottom: 30px;
-            padding: 30px;
+            margin-top: 30px;
+	    margin-bottom: 10px;
+            padding: 10px;
             
             background: #fafafa;
         }
-        section.comments h2 {
+        article.comments h2 {
             color: #555;
             font-size: 18px;
             line-height: 30px;
+	    margin-bottom: 0;
             
             float: left;
             width: 250px;
         }
-        section.comments time {
+        article.comments time {
             float: right;
             
             font: italic 13px/30px Georgia, serif;
         }
-        section.comments div.content {
+        article.comments div.contenu {
             clear: both;
             width: auto;
 
             margin: 0;
-            padding: 20px 0 0;
+            padding: 5px 0 0 20px;
             
-            font-size: 15px;
+            font-size: 13px;
             line-height: 25px;
         }
         
-    section.comments form.commentform {
+    article.comments form.commentform {
         clear: both;
         padding-left: 170px;
         padding-top: 40px;
         
         border-top: 1px solid #eee;
     }
-        section.comments form.commentform p.notification {
+        article.comments form.commentform p.notification {
             clear: both;
             float: none;
             padding-bottom: 25px;
             
             font-weight: bold;            
         }
-            section.comments form.commentform p.notification.error {
+            article.comments form.commentform p.notification.error {
                 color: #c22a0a;
             }
-        section.comments form.commentform legend {
-            margin-left: -170px;
+        article.comments form.commentform legend {
+            margin-left: -115px;
             margin-bottom: 20px;
         }
-        section.comments form.commentform p {
+        article.comments form.commentform p {
             float: left;
             width: 365px;
             
             position: relative;
         }
-            section.comments form.commentform p.email {
+            article.comments form.commentform p.email {
                 position: relative;
                 right: -15px;
             }
-            section.comments form.commentform p.textarea {
+            article.comments form.commentform p.textarea {
                 width: 630px;
             }
-            section.comments form.commentform p em {
+            article.comments form.commentform p em {
                 font: italic 13px Georgia, serif;
                 
                 position: absolute;
@@ -472,30 +473,30 @@ section.comments {
                 
                 color: #aaa;
             }
-        section.comments form.commentform label {
+        article.comments form.commentform label {
             display: block;
             font-size: 15px;
             
             padding-bottom: 8px;
         }
-        section.comments form.commentform input, section.comments form.commentform textarea {
+        article.comments form.commentform input, article.comments form.commentform textarea {
             width: 320px;
             padding: 8px 14px;
             margin-bottom: 20px;
             
             border: 1px solid #bbb;
         }
-            section.comments form.commentform textarea {
-                width: 700px;
+            article.comments form.commentform textarea {
+                width: 500px;
                 min-height: 150px;
                 max-height: 400px;
                 resize: vertical;
             }
-        section.comments form.commentform button {
+        article.comments form.commentform button {
             margin-bottom: 50px;
         }
             
-section.footnote {
+footer.footnote {
     clear: both;
     width: 730px;
 
@@ -503,7 +504,7 @@ section.footnote {
     text-align: left;
     color: #aaa;
     
-    margin: 0 auto 60px;
+    margin: 0 auto;
     padding-left: 170px;
 }
 
@@ -572,20 +573,20 @@ section.footnote {
 @media only screen and (max-width: 900px), only screen and (max-device-width: 480px) {
 
     .wrap, .content {
-        width: 90%;
+        width: 80%;
         margin: 0 5%;
-        padding-left: 0;
+        padding: 5%;
     }
         .content h1 {
             padding-top: 50px;
         }
     
     form#search {
-	width: 900px;
+	width: 90%;
         padding: 10px 5%;
     }
         form#search input {
-            width: 100%;
+            width: 85%;
         }
 
     header#top {
@@ -603,7 +604,9 @@ section.footnote {
                 margin-right: 5px;
             }
         header#top img#search {
-            bottom: -20px;
+	    position: relative;
+            bottom: 30px;
+	    left: 25px;
         }
         
     ul.items {
@@ -624,18 +627,18 @@ section.footnote {
                 text-align: left;
             }
             
-    section.comments {
+    article.comments {
         margin-top: 40px;
         width: auto;
     }
-    section.comments h1 {
+    article.comments h1 {
         padding: 0 20px;
         line-height: 20px;
     }
-    section.comments ul {
+    article.comments ul {
         padding: 0;
     }
-        section.comments ul li {
+        article.comments ul li {
             width: 90%;
             padding: 20px 5%;
             margin-bottom: 0;
@@ -643,38 +646,37 @@ section.footnote {
             
             position: relative;
         }
-            section.comments ul li:last-child {
+            article.comments ul li:last-child {
                 border-bottom: none;
             }
-            section.comments ul li time {
+            article.comments ul li time {
                 position: absolute;
                 right: 20px;
                 top: 20px;
             }
-        section.comments div.content {
+        article.comments div.contenu {
             width: auto;
-            padding-top: 0;
         }
-    section.comments form.commentform {
+    article.comments form.commentform {
         padding: 20px 20px;
         position: relative;
     }
-        section.comments form.commentform legend {
+        article.comments form.commentform legend {
             margin-left: 0;
         }
-        section.comments form.commentform p, section.comments form.commentform p.textarea {
+        article.comments form.commentform p, article.comments form.commentform p.textarea {
             float: none;            
             width: 100%;
         }
-            section.comments form.commentform p.email {
+            article.comments form.commentform p.email {
                 right: 0;
             }
             
-        section.comments form.commentform input, section.comments form.commentform textarea {
+        article.comments form.commentform input, article.comments form.commentform textarea {
             width: 93%;
         }
             
-    section.footnote {
+    footer.footnote {
         width: 90%;
 
         margin: 30px 5%;

@@ -111,6 +111,6 @@ function comment_form_input_text($extra = '') {
 	return '<textarea name="text" id="text" ' . $extra . '></textarea>';
 }
 
-function comment_form_button($text = 'Post Comment', $extra = '') {
-	return '<button class="btn" type="submit" ' . $extra . '>' . $text . '</button>';
+function comment_form_button($text = 'Envoyer', $extra = '') {
+	return '<button class="button" type="submit" ' . $extra . '>' . $text . '</button>';
 }

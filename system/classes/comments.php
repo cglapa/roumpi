@@ -42,15 +42,15 @@ class Comments {
 		$errors = array();
 
 		if(empty($post['name'])) {
-			$errors[] = 'Please enter your name';
+			$errors[] = 'Veuillez spécifier un pseudonyme';
 		}
 		
 		if(filter_var($post['email'], FILTER_VALIDATE_EMAIL) === false) {
-			$errors[] = 'Please enter a valid email address';
+			$errors[] = 'S’il vous plait, entrez au moins une adresse valide…';
 		}
 		
 		if(empty($post['text'])) {
-			$errors[] = 'Please enter your comments';
+			$errors[] = 'Il faudrait peut être écrire quelque chose avant de publier, n’est-ce pas ?';
 		}
 		
 		if(count($errors)) {
@@ -67,7 +67,7 @@ class Comments {
 
 		Db::insert('comments', $post);
 		
-		Notifications::set('success', 'Your comment has been sent');
+		Notifications::set('success', 'Votre avis a été envoyé');
 		
 		return true;
 	}
@@ -77,7 +77,7 @@ class Comments {
 		$errors = array();
 		
 		if(empty($post['text'])) {
-			$errors[] = 'Please enter comment text';
+			$errors[] = 'Écrivez un peu. S’il vous plait.';
 		}
 
 		if(count($errors)) {
@@ -100,7 +100,7 @@ class Comments {
 		$errors = array();
 		
 		if(in_array($post['status'], array('published', 'pending', 'spam')) === false) {
-			$errors[] = 'Invalid comment status';
+			$errors[] = 'Statut de commentaire non valide';
 		}
 
 		if(count($errors)) {
