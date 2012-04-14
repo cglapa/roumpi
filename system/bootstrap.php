@@ -64,7 +64,7 @@ if(function_exists('get_magic_quotes_gpc')) {
 */
 if(Config::load(PATH . 'config.php') === false) {
 	// looks like we are missing a config file
-	echo file_get_contents(PATH . 'system/admin/theme/error_config.php');
+	echo file_get_contents(PATH . theme_url('/errors/config.php');
 	exit(1);
 }
 

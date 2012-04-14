@@ -17,7 +17,7 @@ class Themes {
 	}
 
 	public static function parse($theme) {
-		$file = PATH . 'themes/' . $theme . '/about.txt';
+		$file = PATH . 'themes/' . $theme . '/a-propos.txt';
 
 		if(file_exists($file) === false) {
 			return false;
@@ -27,7 +27,7 @@ class Themes {
 		$contents = explode("\n", trim(file_get_contents($file)));
 		$about = array();
 
-		foreach(array('name', 'description', 'author', 'site', 'license') as $index => $key) {
+		foreach(array('nom', 'description', 'auteur', 'site', 'licence') as $index => $key) {
 			// temp value
 			$about[$key] = '';
 

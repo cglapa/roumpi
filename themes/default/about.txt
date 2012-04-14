@@ -1,5 +1,0 @@
-Theme name:    inchangé
-Description:   Le thème par défaut de Roumpi. Classe et élégant…
-Author name:   Julien Barrier
-Author site:   http://julienbarrier.fr/
-License:       WTFPL (http://sam.zoy.org/wtfpl/COPYING)

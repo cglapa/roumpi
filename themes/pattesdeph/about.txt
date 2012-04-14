@@ -1,5 +1,0 @@
-Theme name:    Pattes d’éléphant
-Description:   Un thème tout blanc, pattes d’éléphant.
-Author name:   Julien Barrier
-Author site:   http://julienbarrier.fr/
-License:       WTFPL (http://sam.zoy.org/wtfpl/COPYING)

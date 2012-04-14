@@ -45,9 +45,9 @@ class Error {
 			$trace = $e->getTraceAsString();
 			$contexts = static::context($file, $e->getLine());
 
-			require PATH . 'system/admin/theme/error_php.php';
+			require PATH . 'system/admin/theme/error/php.php';
 		} else {
-			require PATH . 'system/admin/theme/error_500.php';
+			require PATH . 'system/admin/theme/error/500.php';
 		}
 
 		exit(1);
