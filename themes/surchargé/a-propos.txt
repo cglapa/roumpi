@@ -1,0 +1,5 @@
+Nom:    Surchargé
+Description:   Un thème de blog. Complet.
+Auteur:   Julien Barrier
+Site:   http://julienbarrier.fr
+Licence:       WTFPL (http://sam.zoy.org/wtfpl/COPYING)

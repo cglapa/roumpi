@@ -1,0 +1,5 @@
+Nom:    Plastique
+Description:   Un thème noir, sombre. Devenez artistes !
+Auteur:   Julien Barrier
+Site:   http://julienbarrier.fr/
+Licence:       WTFPL (http://sam.zoy.org/wtfpl/COPYING)
