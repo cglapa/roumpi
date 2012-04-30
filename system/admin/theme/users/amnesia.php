@@ -1,4 +1,4 @@
-<h1>Recover Password</h1>
+<h1>Changer le mot de passe</h1>
 
 <?php echo Notifications::read(); ?>
 
@@ -8,13 +8,13 @@
 		<fieldset>
 			
 			<p>
-			    <label for="email">Email:</label>
+			    <label for="email">Mél. :</label>
 			    <input autocapitalize="off" name="email" id="email" value="<?php echo Input::post('email'); ?>">
 			</p>
 
 			<p class="buttons">
-			    <button type="submit">Recover</button>
-			    <a href="<?php echo Url::make(); ?>">Back to <?php echo Config::get('metadata.sitename'); ?></a>
+			    <button type="submit">Retrouver</button>
+			    <a href="<?php echo Url::make(); ?>">Revenir à <?php echo Config::get('metadata.sitename'); ?></a>
 			</p>
 		</fieldset>
 	</form>

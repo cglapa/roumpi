@@ -1,7 +1,7 @@
 <?php if(comments_open()): ?>
     <article class="comments">
     
-        <h3><?php echo total_comments() . pluralise(total_comments(), ' commentaire'); ?> <a href="#comment" title="Participez !">Ajoutez le votre</a></h3>
+        <h3><?php echo total_comments() . pluralise(total_comments(), ' commentaire'); ?> <a href="#comment" title="Participez !">Ajoutez le vôtre</a></h3>
     
         <?php if(has_comments()): ?>
         <ul class="commentlist">

@@ -1,4 +1,4 @@
-<h1>Log in</h1>
+<h1>Connexion</h1>
 
 <?php echo Notifications::read(); ?>
 
@@ -8,20 +8,20 @@
 		<fieldset>
 			
 			<p>
-			    <label for="user">Username:</label>
+			    <label for="user">Pseudonyme :</label>
 			    <input autocapitalize="off" name="user" id="user" value="<?php echo Input::post('user'); ?>">
 			</p>
 			
 			<p>
-    			<label for="pass">Password:</label>
+    			<label for="pass">Mot de passe :</label>
     			<input type="password" name="pass" id="pass">
     			
-    			<em><a href="<?php echo admin_url('users/amnesia'); ?>">Forgotten your password?</a></em>
+    			<em><a href="<?php echo admin_url('users/amnesia'); ?>">Mot de passe oublié ?</a></em>
 			</p>
 
 			<p class="buttons">
-			    <button type="submit">Login</button>
-			    <a href="<?php echo Url::make(); ?>">Back to <?php echo Config::get('metadata.sitename'); ?></a>
+			    <button type="submit">Connexion</button>
+			    <a href="<?php echo Url::make(); ?>">Retour à <?php echo Config::get('metadata.sitename'); ?></a>
 			</p>
 		</fieldset>
 	</form>

@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title>Manage <?php echo Config::get('metadata.sitename'); ?></title>
+		<title>Gérer <?php echo Config::get('metadata.sitename'); ?></title>
 
 		<link rel="stylesheet" href="<?php echo theme_url('assets/css/admin.css'); ?>">
 		<link rel="stylesheet" href="<?php echo theme_url('assets/css/popup.css'); ?>">
@@ -25,8 +25,8 @@
 				</ul>
 			</nav>
 
-			<p>Logged in as <strong><?php echo $user->real_name; ?></strong>. 
-			<a href="<?php echo admin_url('users/logout'); ?>">Logout</a></li>
+			<p>Connecté en tant que <strong><?php echo $user->real_name; ?></strong>. 
+			<a href="<?php echo admin_url('users/logout'); ?>">Se déconnecter</a></li>
 			<?php endif; ?>
 		</header>
 

@@ -29,11 +29,11 @@
 			errors = [];
 			
 		if(label.length == 0) {
-			errors.push('Please enter a field label');
+			errors.push('Entrez du texte s’il vous plaît.');
 		}
 		
 		if(key.length == 0) {
-			errors.push('Please enter a field key');
+			errors.push('Merci d’entrer une clé.');
 		}
 		
 		if(errors.length) {
@@ -47,11 +47,11 @@
 	};
 
 	var show_add_field = function() {
-		var html = '<fieldset><legend>Custom Field</legend><em>Please enter the label and the key for your field.</em>';
-		html +='<p><label>Label</label><input name="field_label" type="text"></p>';
-		html +='<p><label>Key</label><input name="field_key" type="text"></p>';
+		var html = '<fieldset><legend>Champ personnalisé</legend><em>Merci d’entrer un nom et une clé pour ce champ.</em>';
+		html +='<p><label>Nom</label><input name="field_label" type="text"></p>';
+		html +='<p><label>Clé</label><input name="field_key" type="text"></p>';
 		html += '</fieldset>';
-		html +='<p class="buttons"><button name="create" type="button">Create</button> <a href="#close">Close</a></p>';
+		html +='<p class="buttons"><button name="create" type="button">Créer</button> <a href="#close">Fermer</a></p>';
 		
 		var box = new Element('div', {
 			'class': 'popup_wrapper', 

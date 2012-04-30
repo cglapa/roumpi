@@ -31,17 +31,17 @@
 		var text = $$('[data-text=' + id + ']').get('html');
 		var status = $$('[data-status=' + id + ']').get('html');
 
-		var html = '<fieldset><legend>Edit Comment</legend><em>Update the comment text here.</em>';
-		html +='<p><label>Text</label><textarea name="comment_text">' + text + '</textarea></p>';
+		var html = '<fieldset><legend>Éditer le commentaire</legend><em>Mettre à jour le texte de cet avis.</em>';
+		html +='<p><label>Texte</label><textarea name="comment_text">' + text + '</textarea></p>';
 		html +='<p><label>Status</label><select name="comment_status">';
 
-			html += '<option value="published"' + (status == 'published' ? ' selected' : '') + '>Published</option>';
-			html += '<option value="pending"' + (status == 'pending' ? ' selected' : '') + '>Pending</option>';
+			html += '<option value="published"' + (status == 'published' ? ' selected' : '') + '>Publié</option>';
+			html += '<option value="pending"' + (status == 'pending' ? ' selected' : '') + '>En attente</option>';
 			html += '<option value="spam"' + (status == 'spam' ? ' selected' : '') + '>Spam</option>';
 
 		html += '</select></p>';
 		html += '</fieldset>';
-		html +='<p class="buttons"><button name="update" type="button">Update</button> <a href="#close">Close</a></p>';
+		html +='<p class="buttons"><button name="update" type="button">Mettre à jour</button> <a href="#close">Fermer</a></p>';
 		
 		var content = new Element('div', {
 			'class': 'popup_wrapper',

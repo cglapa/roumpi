@@ -1,4 +1,4 @@
-<h1>Pages <a href="<?php echo admin_url('pages/add'); ?>">Create a new page</a></h1>
+<h1>Listes des pages <a href="<?php echo admin_url('pages/add'); ?>">En écrire une nouvelle</a></h1>
 
 <?php echo Notifications::read(); ?>
 	
@@ -15,6 +15,6 @@
     	    <?php endforeach; ?>
     	</ul>
 	<?php else: ?>
-    	<p>No pages just yet. Why not <a href="<?php echo admin_url('pages/add'); ?>">write a new one</a>?</p>
+    	<p>Il n’y a pas encore de pages. Pourquoi ne pas <a href="<?php echo admin_url('pages/add'); ?>">en écrire une nouvelle</a>?</p>
 	<?php endif; ?>
 </section>

@@ -1,15 +1,15 @@
 
-<h1>Add a Post</h1>
+<h1>Ajouter un article</h1>
 
 <?php echo Notifications::read(); ?>
 
 <section class="content">
 	<nav class="tabs">
 		<ul>
-			<li><a href="#post">Post</a></li>
-			<li><a href="#customise">Customise</a></li>
-			<li><a href="#fields">Custom Fields</a></li>
-			<li><a href="#comments">Comments</a></li>
+			<li><a href="#post">Article</a></li>
+			<li><a href="#customise">Personnaliser</a></li>
+			<li><a href="#fields">Champs personnalisés</a></li>
+			<li><a href="#comments">Commentaires</a></li>
 		</ul>
 	</nav>
 	<form method="post" action="<?php echo Url::current(); ?>" novalidate>
@@ -17,35 +17,35 @@
 
 			<fieldset>
 				<p>
-	    			<label for="title">Title:</label>
+	    			<label for="title">Titre :</label>
 	    			<input id="title" name="title" value="<?php echo Input::post('title'); ?>">
 	    			
-	    			<em>Your post&rsquo;s title.</em>
+	    			<em>Le titre de votre page.</em>
 	    		</p>
 				
 				<p>
-				    <label for="slug">Slug:</label>
+				    <label for="slug">Identifiant :</label>
 				    <input id="slug" autocomplete="off" name="slug" value="<?php echo Input::post('slug'); ?>">
 				    
-				    <em>The slug for your post (<code id="output">slug</code>).</em>
+				    <em>Ce qui sera affiché dans l’url (<code id="output">identifiant</code>).</em>
 				</p>
 				
 	            <p>
 	                <label for="description">Description:</label>
 	                <textarea id="description" name="description"><?php echo Input::post('description'); ?></textarea>
 	                
-	                <em>A brief outline of what your post is about. Used in the post introduction, RSS feed, and <code>&lt;meta name="description" /&gt;</code>.</em>
+	                <em>Une brève description de ce qui est publié. Ça sera mis dans l’introduction, dans le flux RSS et dans <code>&lt;meta name="description" /&gt;</code>.</em>
 	            </p>
 	            
 				<p>
-				    <label for="html">Content:</label>
+				    <label for="html">Contenu :</label>
 				    <textarea id="html" name="html"><?php echo Input::post('html'); ?></textarea>
 				    
-				    <em>Your post's main content. Enjoys a healthy dose of valid HTML.</em>
+				    <em>Le contenu de l’article. Mettez une bonne dose de HTML valide.</em>
 				</p>
 				
 				<p>
-				    <label>Status:</label>
+				    <label>Statut:</label>
 	    			<select id="status" name="status">
 	    				<?php foreach(array('draft', 'archived', 'published') as $status): ?>
 	    				<?php $selected = (Input::post('status') == $status) ? ' selected' : ''; ?>
@@ -55,13 +55,13 @@
 	    				<?php endforeach; ?>
 	    			</select>
 	    			
-	    			<em>Statuses: live (published), pending (draft), or hidden (archived).</em>
+	    			<em>Les statuts : publié (published), Brouillon (draft), ou caché (archived).</em>
 				</p>
 				
 				<p>
-				    <label for="comments">Allow Comments:</label>
+				    <label for="comments">Autoriser les commentaires :</label>
 				    <input id="comments" name="comments" type="checkbox" value="1"<?php if(Input::post('comments')) echo ' checked'; ?>>
-				    <em>This will allow users to comment on your posts.</em>
+				    <em>Ceci permettra au public de donner son avis.</em>
 				</p>
 			</fieldset>
 		
@@ -69,21 +69,21 @@
 		<div data-tab="customise" class="tab">
 
 			<fieldset>
-			    <legend>Customise</legend>
-			    <em>Here, you can customise your posts. This section is optional.</em>
+			    <legend>Personnaliser</legend>
+			    <em>Ici, vous pouvez personnaliser vos articles. Cette section est optionnelle.</em>
 			    
 			    <p>
-			        <label for="css">Custom CSS:</label>
+			        <label for="css">CSS personnel :</label>
 			        <textarea id="css" name="css"><?php echo Input::post('css'); ?></textarea>
 			        
-			        <em>Custom CSS. Will be wrapped in a <code>&lt;style&gt;</code> block.</em>
+			        <em>Un peu de CSS en plus. Ça sera mis dans un bloc <code>&lt;style&gt;</code>.</em>
 			    </p>
 
 	            <p>
-	                <label for="js">Custom JS:</label>
+	                <label for="js">JS personnalisé :</label>
 	                <textarea id="js" name="js"><?php echo Input::post('js'); ?></textarea>
 	                
-	                <em>Custom Javascript. Will be wrapped in a <code>&lt;script&gt;</code> block.</em>
+	                <em>Pour quelque chose de classe. Tout est emballé dans un bloc <code>&lt;script&gt;</code>.</em>
 	            </p>
 			</fieldset>
 		
@@ -91,8 +91,8 @@
 		<div data-tab="fields" class="tab">
 
 			<fieldset>
-			    <legend>Custom fields</legend>
-			    <em>Create custom fields here.</em>
+			    <legend>Autres champs</legend>
+			    <em>Ajoutez ce que vous voulez ici.</em>
 
 				<div id="fields">
 					<!-- Re-Populate post data -->
@@ -106,7 +106,7 @@
 				</div>
 			</fieldset>
 
-			<button id="create" type="button">Create a custom field</button>
+			<button id="create" type="button">Créer un champ personnalisé</button>
 		</div>
 			
 		<p class="buttons">

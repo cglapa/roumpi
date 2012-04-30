@@ -1,10 +1,10 @@
 
 	<?php if(($user = Users::authed()) !== false): ?>
 	<aside id="sidebar">
-		<h2>Status check</h2>
+		<h2>Vérification du statut</h2>
 		
 		<?php if(error_check() !== false): ?>
-		<p>Oh no, we found <?php echo count(error_check()) === 1 ? 'a problem' : 'some problems'; ?>!</p>
+		<p>Zut, nous avons trouvé <?php echo count(error_check()) === 1 ? 'un problème' : 'quelques erreurs'; ?>!</p>
 		
 		<ul>
 		    <?php foreach(error_check() as $error): ?>
@@ -12,19 +12,19 @@
 		    <?php endforeach; ?>
 		</ul>
 		<?php else: ?>
-		    <p>Nice job, keep on going!</p>        
+		    <p>Bon boulot, continuez comme ça !</p>        
 		<?php endif; ?>
 	</aside>
 	<?php endif; ?>
 
     <footer id="bottom">
         <small>Propulsé par Roumpi, dans sa version <?php echo ROUMPI_VERSION; ?>. 
-        <a href="<?php echo Url::make(); ?>">Visit your site</a>.
+        <a href="<?php echo Url::make(); ?>">Voir votre site</a>.
         <?php if(Config::get('debug', false)): ?>
-        <br><a id="debug_toggle" href="#debug">Show database profile</a>
+        <br><a id="debug_toggle" href="#debug">Profil de la base de données</a>
         <?php endif; ?></small>
         
-        <em>Make blogging beautiful.</em>
+        <em>Blogguer. Plus loin.</em>
     </footer>
 
 	<?php if(Config::get('debug', false)): ?>
