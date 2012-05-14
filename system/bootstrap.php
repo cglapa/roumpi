@@ -65,6 +65,7 @@ Check our installation
 if(Config::load(PATH . 'config.php') === false) {
 // looks like we are missing a config file
 echo file_get_contents(PATH . 'system/admin/theme/error/config.php');
+header('Location: install/');
 exit(1);
 }
 
