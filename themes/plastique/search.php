@@ -1,10 +1,10 @@
 <div id="content-bg">
 <section class="content">
     
-    <h1>You searched for &ldquo;<?php echo search_term(); ?>&rdquo;.</h1>
+    <h1>Vous avez recherché « <?php echo search_term(); ?> ».</h1>
     
     <?php if(has_search_results()): ?>
-        <p>We found <?php echo total_search_results(); ?> <?php echo pluralise(total_search_results(), 'result'); ?> for &ldquo;<?php echo search_term(); ?>&rdquo;</p>
+        <p>Nous avons trouvé <?php echo total_search_results(); ?> <?php echo pluralise(total_search_results(), 'resultat'); ?> pour « <?php echo search_term(); ?> »</p>
         <ul class="items wrap">
 			<?php while(search_results()): ?>
 			<li>
@@ -16,8 +16,9 @@
 			<?php endwhile; ?>
         </ul>
     <?php else: ?>
-        <p>Unfortunately, there's no results for &ldquo;<?php echo search_term(); ?>&rdquo;. Did you spell everything correctly?</p>
+        <p>Malheureusement, il n’y a pas de résultat pour « <?php echo search_term(); ?> ». L’avez-vous correctement écrit ?</p>
     <?php endif; ?>
     
 </section>
 </div>
+<?php echo my_last_tweet(); ?>

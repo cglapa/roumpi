@@ -11,7 +11,8 @@
 <?php include('includes/comment_form.php'); ?>
 
 <section class="footnote">
-	<p>This article is my <?php echo numeral(article_id()); ?> oldest. It is <?php echo count_words(article_html()); ?> words long. </p>
+	<p><?php echo numeral(article_id()); ?> article publié. Il comporte <?php echo count_words(article_html()); ?> mots. </p>
 </section>
 
 </div>
+<?php echo my_last_tweet(); ?>

@@ -6,3 +6,4 @@
 </section>
 
 </div>
+<?php echo my_last_tweet(); ?>

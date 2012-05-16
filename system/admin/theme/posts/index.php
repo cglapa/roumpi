@@ -9,7 +9,7 @@
 	    <li>
 	        <a href="<?php echo admin_url('posts/edit/' . $article->id); ?>">
 	            <strong><?php echo truncate($article->title, 4); ?></strong>
-	            <span>Créé <time><?php echo date(Config::get('metadata.date_format'), $article->created); ?></time> 
+	            <span>Créé le<time><?php echo date(Config::get('metadata.date_format'), $article->created); ?></time> 
 	            by <?php echo $article->author; ?></span>
 	            
 	            <i class="status"><?php echo $article->status; ?></i>
