@@ -100,3 +100,8 @@ Session::end();
 Output awesomeness!
 */
 Response::send();
+
+/**
+date
+*/
+setlocale(LC_ALL, 'fr_FR');

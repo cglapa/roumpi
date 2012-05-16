@@ -1,10 +1,12 @@
 <div id="content-bg">
 <section class="content">
-    <h1>Oh no, this page can&rsquo;t be found.</h1>
+    <h1>La trahison des images (1929)</h1>
 
-    <p>Unfortunately, the page at <code><?php echo current_url(); ?></code> 
-    can't be found, but don't give up hope yet! You can always try going back to 
-    the homepage, or searching.</p>
+    <p>Malheureusement, la page à l’adresse indiquée (<code><?php echo current_url(); ?></code>) 
+    ne peut être trouvée. N’abandonnez pas pour autant ! Vous pouvez toujours
+    essayer de revenir à la page d’accueil ou faire une recherche.</p>
+
+	<h2 class="script">Ceci n’est pas une page.</h2>
 </section>
 </div>
 

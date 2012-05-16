@@ -26,6 +26,8 @@ h1 {
 }
 
 a, a * {
+    color: #1e1e1e;
+    text-decoration: none;
     -webkit-transition: color .25s;
     -moz-transition: color .25s;
     -ms-transition: color .25s;
@@ -36,7 +38,11 @@ a, a * {
         -webkit-transform: translateY(1px);
     }
 
-.wrap, .content {
+    a:hover {
+	color: #66b1b4;
+    }
+
+.content, .wrap {
 	width: 900px;
 	margin: 0 auto;
 	
@@ -55,13 +61,14 @@ a, a * {
         }
         .content p {
             padding-bottom: 15px;
+	    text-indent: 20px;
         }
 
 form#search {
 	position: relative;
 	background: #ddd;
 	
-	padding: 10px 0;
+	padding: 10px 0 ;
 }
 	form#search input {
 		padding: 8px 12px;
@@ -73,7 +80,7 @@ form#search {
 
 header#top {
 	background: url("../img/texture.gif") no-repeat center top #333;
-	padding: 50px 0 20px;
+	padding: 20px 0 20px;
 }
 	header#top div {
 		position: relative;
@@ -86,42 +93,31 @@ header#top {
 		text-decoration: none;
 		
 		display: block;
-		width: 130px;
+		width: 150px;
 		
-		padding-bottom: 4px;
+		padding-bottom: 0;
 	}
 	    header#top a#logo:hover, header#top nav li.active a, header#top nav li.active a:hover {
 	        color: #66b1b4;
 	    }
-	header#top nav {
+	header#top p.description{
+		display: block;
 		position: absolute;
-		left: 170px;
+		left: 200px;
 		bottom: 0;
+	}/*
+	nav {
+		float: left;
+		border-right: 1px solid black;
+		width: 200px;
+		padding: 20px 0 10px 50px; 
 	}
-		header#top nav li {
-			float: left;
-			position: relative;
-			
-			margin-right: 50px;
+		nav li {
+			text-align: left;
 		}
-		    header#top nav li.active:after {
-		        content: '';
-		        display: block;
-
-		        position: absolute;
-		        left: 50%;
-		        bottom: -20px;
-		        
-		        width: 0;
-		        height: 0;
-		        
-		        border-left: 8px solid transparent;
-		        border-right: 8px solid transparent;
-		        border-bottom: 8px solid #fff;
-		        
-		        margin-left: -8px;
+		    nav li.active {
 		    }
-		header#top nav li a {
+		nav li a {
 			color: #bbb;
 			
 			font-weight: bold;
@@ -131,15 +127,56 @@ header#top {
 			
 			display: block;
 		}
-		    header#top nav li a:hover {
+		    nav li a:hover {
 		        color: #eee;
+		    }*/
+
+	    nav li.active a, nav li.active a:hover {
+	        color: #2082ab;
+	    }
+	nav {
+		position: relative;
+		background: #ddd;
+	
+		padding: 0 0 5px 0;
+	}
+	nav ul {
+		padding: 5px 12px 8px 12px;
+		color: #333;
+		
+		border: none;
+		width: 900px;
+		margin: 0 auto 10px;
+	}
+		nav li {
+			float: left;
+			position: relative;
+			
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+		nav li a {
+			color: #888;
+			
+			font-weight: bold;
+			font-size: 12px;
+			
+			text-decoration: none;
+			
+			display: block;
+
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+		    nav li a:hover {
+		        color: #444;
 		    }
 	header#top img#search {
 		cursor: pointer;
 		
 		position: absolute;
 		right: 0;
-		bottom: 0;
+		bottom: 9px;
 	}
 	
 ul.items {
@@ -165,8 +202,8 @@ ul.items {
             font-size: 13px;
             line-height: 34px;
             
-            width: 130px;
-            padding-right: 40px;
+            width: 110px;
+            padding-right: 34px;
             text-align: right;
         }
             ul.items li a:hover time {
@@ -181,7 +218,7 @@ ul.items {
             display: block;
             float: left;
             
-            width: 730px;
+            width: 630px;
         }
             ul.items li a:hover h2 {
                 color: #568b8d;
@@ -250,8 +287,8 @@ footer#bottom {
         left: 876px;
         top: 16px;
         margin-top: -14px;
-        width: 28px;
-        height: 26px;
+        width: 23px;
+        height: 30px;
         
         background: url('../img/icon_2.png');
         text-indent: -999em;
@@ -279,12 +316,20 @@ footer#bottom {
             padding-top: 50px;
         }
     
-    form#search {
-        padding: 10px 5%;
+    #search {
+        width: 100%;
     }
-        form#search input {
-            width: 100%;
+        #search ul {
+            
         }
+	    #search nav li a {
+		color: #888888;
+		display: block;
+		font-size: 10px;
+		font-weight: bold;
+		padding-right: 15px;
+		text-decoration: none;
+	}
 
     header#top {
         overflow: hidden;
@@ -338,6 +383,14 @@ footer#bottom {
             
             top: 30px;
         }
+
+	header#top img#search {
+		cursor: pointer;
+		
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
 }
 
 section.comments {
@@ -510,3 +563,95 @@ section.comments {
 	padding-bottom: 30px;
 	background: #fff;
 }
+
+div.video {
+	display: block;
+	margin: auto;
+	max-width: 500px;
+	max-height: 312px;
+	border: 8px solid black;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.content legend {
+	font-size: small;
+	color: #66b1b4;
+	text-align: center;
+}
+
+h2.script{
+	font-family: "LobsterTwoItalic";
+	text-align: center;
+}
+
+div#pub {
+    line-height: 12px;
+    margin-top: 26px;
+}
+
+div#pub a.annonce{
+	font-size: small;
+	text-indent: 10px;
+}
+
+div#pub table{
+}
+
+.content ul {
+	list-style-type: none;
+	margin-left: 40px;
+}
+
+.content ul li:before {
+	content: "− ";
+}
+
+@font-face {
+    font-family: 'LobsterTwoRegular';
+    src: url('../fonts/LobsterTwo-Regular-webfont.eot');
+    src: url('../fonts/LobsterTwo-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/LobsterTwo-Regular-webfont.woff') format('woff'),
+         url('../fonts/LobsterTwo-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/LobsterTwo-Regular-webfont.svg#LobsterTwoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'LobsterTwoItalic';
+    src: url('../fonts/LobsterTwo-Italic-webfont.eot');
+    src: url('../fonts/LobsterTwo-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/LobsterTwo-Italic-webfont.woff') format('woff'),
+         url('../fonts/LobsterTwo-Italic-webfont.ttf') format('truetype'),
+         url('../fonts/LobsterTwo-Italic-webfont.svg#LobsterTwoItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'LobsterTwoBold';
+    src: url('../fonts/LobsterTwo-Bold-webfont.eot');
+    src: url('../fonts/LobsterTwo-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/LobsterTwo-Bold-webfont.woff') format('woff'),
+         url('../fonts/LobsterTwo-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/LobsterTwo-Bold-webfont.svg#LobsterTwoBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'LobsterTwoBoldItalic';
+    src: url('../fonts/LobsterTwo-BoldItalic-webfont.eot');
+    src: url('../fonts/LobsterTwo-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/LobsterTwo-BoldItalic-webfont.woff') format('woff'),
+         url('../fonts/LobsterTwo-BoldItalic-webfont.ttf') format('truetype'),
+         url('../fonts/LobsterTwo-BoldItalic-webfont.svg#LobsterTwoBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
